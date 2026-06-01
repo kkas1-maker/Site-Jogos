@@ -1,0 +1,385 @@
+:root {
+  --primaria: #004d40;
+  --secundaria: #00695c;
+  --destaque: #e0f2f1;
+  --fundo: #f8fafc;
+  --texto: #334155;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: var(--fundo);
+  color: var(--texto);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 50px auto 40px;
+  padding: 0 20px;
+}
+
+header {
+  background: var(--primaria);
+  color: white;
+  padding: 15px 20px 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 2.2em;
+  margin-top: 0;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.menu li a:hover, 
+.menu li a.ativo {
+  background-color: white;
+  color: var(--primaria);
+}
+
+.card {
+  background: white;
+  border-radius: 16px; 
+  border: 1px solid rgba(0, 77, 64, 0.08); 
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04); 
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0, 77, 64, 0.12); 
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(0, 77, 64, 0.08); 
+}
+
+.card h3 {
+  color: var(--primaria);
+  margin: 18px 0 8px;
+  font-size: 1.4em;
+}
+
+.card p {
+  color: #555;
+  padding: 0 20px 25px;
+  line-height: 1.6;
+  font-weight: 500;
+  flex: 1;
+}
+
+.banner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  display: flex;
+}
+
+.banner img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.resumo {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+  border-left: 5px solid var(--primaria);
+  line-height: 1.8;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.resumo h2 {
+  color: var(--primaria);
+  font-size: 2em;
+}
+
+.resumo p, .resumo ul {
+  font-size: 1.1em;
+}
+
+.resumo ul {
+  margin-left: 20px;
+}
+
+.destaques-ano {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.destaque-item {
+  flex: 1;
+  min-width: 250px;
+  background: white; 
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 77, 64, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+}
+
+.destaque-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 77, 64, 0.12);
+}
+
+.modalidades h2 {
+  text-align: center;
+  color: var(--primaria);
+  margin-bottom: 30px;
+  font-size: 2em;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.grid .card {
+  flex: 1 1 calc(33.333% - 30px);
+  min-width: 280px;
+}
+
+.topo-card {
+  font-size: 3.5em;
+  padding: 25px 0 5px;
+}
+
+.equipes h2 {
+  text-align: left;
+  border-bottom: 2px dashed #cbd5e1;
+  padding-bottom: 12px;
+  margin-top: 45px;
+  margin-bottom: 25px; 
+  color: var(--primaria);
+  font-size: 1.8em;
+}
+
+.equipes h2:first-child, 
+.equipes h2:first-of-type {
+  margin-top: 0;
+}
+
+.grupo, .historico, .galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px; 
+}
+
+.grupo .card, .historico .card, .galeria .foto {
+  flex: 1 1 calc(25% - 25px); 
+  min-width: 220px;
+}
+
+.historico .card figcaption {
+  background: var(--destaque);
+  color: var(--primaria);
+  padding: 15px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.foto {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+}
+
+.foto:hover { 
+  transform: scale(1.03); 
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+.foto img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.programacao {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.dia {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+}
+
+.dia h2 {
+  color: var(--primaria);
+  border-bottom: 2px dashed #cbd5e1;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+}
+
+.dia ul { list-style: none; display: flex; flex-direction: column; gap: 12px;}
+
+.dia li {
+  background: var(--fundo);
+  padding: 14px 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+  border-left: 5px solid #cbd5e1; 
+  transition: transform 0.2s ease;
+}
+
+.dia li:hover {
+  transform: translateX(4px); 
+}
+
+.dia li strong {
+  background: #e2e8f0;
+  padding: 5px 10px;
+  border-radius: 6px;
+  margin-right: 15px;
+  color: #1e293b;
+}
+
+.dia li span.local {
+  margin-left: auto;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.dia li.futsal   { border-left-color: #2f00ff; }
+.dia li.handebol { border-left-color: #facc15; }
+.dia li.basquete { border-left-color: #ff6200; }
+.dia li.volei    { border-left-color: #ff00ea; }
+.dia li.xadrez   { border-left-color: #1eff00; }
+.dia li.tenis    { border-left-color: #00ffff; }
+
+.contato-form {
+  background: white;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 8px; 
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+  border-top: 5px solid var(--primaria); 
+}
+
+.contato-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contato-form h2 {
+  text-align: center;
+  color: var(--primaria);
+  margin-bottom: 30px;
+  font-size: 2em; 
+}
+
+.contato-form label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: var(--primaria);
+  font-size: 1em;
+}
+
+.contato-form input, .contato-form textarea {
+  background: #ffffff; 
+  border: 1px solid #ccc;
+  border-radius: 6px; 
+  padding: 14px;
+  font-family: inherit;
+  font-size: 1em;
+  margin-bottom: 20px;
+  color: var(--texto);
+  transition: border-color 0.3s ease; 
+}
+
+.contato-form input:focus, .contato-form textarea:focus {
+  border-color: var(--secundaria); 
+  outline: none;
+}
+
+.contato-form button {
+  padding: 16px;
+  background: var(--primaria); 
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.contato-form button:hover {
+  background: var(--secundaria); 
+}
+
+.rodape {
+  background: var(--primaria);
+  color: white;
+  padding: 25px 20px;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  text-align: center;
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.03);
+}
